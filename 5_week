@@ -1,0 +1,52 @@
+
+	This is a Classroom License for instructional use only.
+	Research and commercial use is prohibited.
+>> td=0:2*pi/100:2*pi;
+>> ud=sin(td);
+>> stem(ud,'.')
+>> UD=[];
+>> for n=1:3000
+UD=[UD ud];
+end;
+>> stem(ud,'.')
+>> stem(UD,'.')
+>> stem(UD,'.')
+>> soundsc(x,fvz)
+Undefined function or variable 'x'.
+ 
+>> sound
+Error using sound (line 24)
+Not enough input arguments.
+ 
+>> sound()
+Error using sound (line 24)
+Not enough input arguments.
+ 
+>> sound<-1,1>
+ sound<-1,1>
+           |
+Error: Expression or statement is incomplete or incorrect.
+ 
+>> sound()
+Error using sound (line 24)
+Not enough input arguments.
+ 
+>> sound(UD)
+>> sound(UD)
+>> sound(UD,100000)
+>> sound(UD,100000)
+>> UD2=UD(1:2:303000);
+>> sound(UD,100000)
+>> sound(UD2,50000)
+>> sound(UD2,50000)
+>> sound(UD,100000)
+>> 
+>> UD22=decimate(UD,2);
+>> soundsc(UD22,50000)
+>> sound(UD,100000)
+>> soundsc(UD22,50000)
+>> sound(UD,100000)
+>> UD222=interp(UD,2);
+>> soundsc(UD222,200000)
+>> soundsc(UD222,1000)
+soundsc(UD222,200000)
