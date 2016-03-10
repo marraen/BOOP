@@ -50,3 +50,19 @@ Not enough input arguments.
 >> soundsc(UD222,200000)
 >> soundsc(UD222,1000)
 soundsc(UD222,200000)
+
+
+///////////////////////////////// fce na diskretni posloupnost reakce na jednotkovz skok
+function [yn]=disyst(xn,yp)
+delka=length(xn);
+yn=[];
+
+for n=1:delka;
+    yp=xn(n)+0.9*yp;
+    yn=[yn yp];
+end
+////////////////////////////////
+
+>> x=[1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0];
+>> y=disyst(x, 0)
+>> stem(y)
