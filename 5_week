@@ -1,6 +1,4 @@
 
-	This is a Classroom License for instructional use only.
-	Research and commercial use is prohibited.
 >> td=0:2*pi/100:2*pi;
 >> ud=sin(td);
 >> stem(ud,'.')
