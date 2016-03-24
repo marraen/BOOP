@@ -58,3 +58,12 @@
 >> S2=fft(s2);
 >> Mod2=2/N*abs(S2);
 >> stem(k,Mod2,'.')
+
+>> s2hamm=s2*hamming(N);
+>> s2hamm=s2.*hamming(N)';
+>> S2hamm=fft(s2hamm);
+>> Mod2hamm=2/N*abs(S2hamm);
+>> stem(Mod2hamm,'.');
+
+
+
