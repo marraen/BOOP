@@ -1,0 +1,17 @@
+>> uiopen('d:\temp\zvuk1.wav',1)
+>> sound(zvuk1)
+Undefined function or variable 'zvuk1'.
+ 
+>> sound(zvuk1.wav)
+Undefined variable "zvuk1" or function "zvuk1.wav".
+ 
+>> sound(zvuk1.wav,44000)
+Undefined variable "zvuk1" or function "zvuk1.wav".
+ 
+>> sound(data);
+>> sound(data, 22050);
+>> revsound=flioud(data);
+Undefined function 'flioud' for input arguments of type 'double'.
+ 
+>> revsound=flipud(data);
+>> sound(revsound, 22050);
