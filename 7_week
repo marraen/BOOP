@@ -67,3 +67,17 @@
 
 
 
+>> uiopen('d:\sig_fft_test.wav',1)
+>> func=data;
+>> stem (data);
+>> funcDFT=fft(func);
+>> stem(funcDFT);
+>> sound(data,fs)
+>> stem(funcDFT);
+>> 
+>> ModNoise=abs(funcDFT);
+>> stem(ModNoise,'.');
+
+
+
+
