@@ -38,3 +38,12 @@
 
 >> stem(f(1:(N-1)/2),Mod(1:(N-1)/2),'.')
 >> 
+>> Fa=50;
+>> Fvz=400;
+>> N=400;
+>> k=0:N-1;
+>> Tvz=1/Fvz;
+>> s1=sin(2*pi*Fa*k*Tvz);
+>> S1=fft(s1);
+>> Mod1=2/N*abs(S1);
+>> stem(k,Mod1,'.')
