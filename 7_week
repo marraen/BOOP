@@ -1,17 +1,40 @@
 >> uiopen('d:\temp\zvuk1.wav',1)
->> sound(zvuk1)
-Undefined function or variable 'zvuk1'.
- 
->> sound(zvuk1.wav)
-Undefined variable "zvuk1" or function "zvuk1.wav".
- 
->> sound(zvuk1.wav,44000)
-Undefined variable "zvuk1" or function "zvuk1.wav".
- 
->> sound(data);
+
 >> sound(data, 22050);
->> revsound=flioud(data);
-Undefined function 'flioud' for input arguments of type 'double'.
- 
+
 >> revsound=flipud(data);
 >> sound(revsound, 22050);
+---------------------------------------------------------------------------------
+>> td=0:2*pi/100:2*pi;
+>> ud=sin(td);
+>> Fvz=100e3;
+>> plot(ud);
+>> plot(ud,'*');
+>> plot(ud,'.');
+>> stem(ud,'.');
+>> UD=fft(ud);
+>> UD'; // bez stredniku pro vypsani, apostrof otaci z radku na sloupec
+>> Mod=abs(UD);
+>> Pha=angle(UD);
+>> subplot(211);
+>> stem(Mod,'.');
+>> subplot(212);
+>> stem(Pha,'.');
+
+
+>> td1=0:2*pi/100:2*pi;
+>> x1=sin(td1);
+>> td2=0:2*pi/50:2*pi;
+>> x2=sin(td2);
+>> x2=[x2 x2(2:51)];
+
+>> x=x1+x2;
+>> stem(x,'.');
+>> X=fft(x);
+>> N=length(x);
+>> Mod=2/N*abs(X);
+>> tp=1e-3;
+>> f=(0:N-1)/tp;
+
+>> stem(f(1:(N-1)/2),Mod(1:(N-1)/2),'.')
+>> 
