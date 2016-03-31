@@ -50,5 +50,13 @@ dolní propust
 2) zapište kmitočtovou charku H(omega).... z=> e^jomega, h(omega)=ao(e^jomega+1)/(e^jomega-0,5), |H(omega)|=1;
 3) normovací koeficient ao, 1=ao(1+1)/(1-0,5) => ao=1/4
 4) vzpočtěte h[0] výpočtem počáteční podmínky z H(z) h[0]= lim(z->infinity) H(z) = lim(z->infinity) 1/4 * (1+1/z)/(1-0,5/z) = 1/4*1/1=1/4
-
-
+5) určete diferenční rovnici filtru y[n]...   Y(z) - 1/4 X(z)* (z+1)/(z-0,5)
+                                              Y(z)(z-0,5)=1/4X(z)(z+1)
+                                              Y(z)/z-0,5Y(z)=1/4X(z)*z+1/4X(z)
+                                              .................................
+                                              inv.Z do tvaru y[n]=
+                                              
+6) impulzní odezva filtru h[n] zpětnou transf. přenosové fce H(z) ..... H(z)=1/4*(z)/(z-0,5)+1/4*(1)/(z-0,5)
+                                                                        h[n]=1/4(1/2)^n*u[n]+1/4(1/2)^(n-1) * u[n-1]
+                                                                        h[0]=1/4(1/2)^0*1+0=1/4
+pak další 4 úkoly, viz. cviko 7 (week 8)
