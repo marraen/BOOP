@@ -1,0 +1,13 @@
+clc
+clear all
+syms n z;
+H=(0.9*z^-1)/(1-1.8*z^-1+0.81*z^-2);
+h0=limit(H, z, Inf)
+X=1+2*z^-1+2*z^-2+1*z^-3;
+Y=H*X;
+y=iztrans(Y, n);
+yy=[eval(subs(y,0)) eval(subs(y,1)) eval(subs(y,2)) eval(subs(y,3))]
+yy=[eval(subs(y,0)) eval(subs(y,10)) eval(subs(y,12)) eval(subs(y,13))]
+eval y
+
+%this was all i needed to pass my z-trans test... hopefully, still didnt get a result
