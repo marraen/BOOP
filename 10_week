@@ -22,3 +22,17 @@ ans =
 >> z=filter(c,b,data);
 >> soundsc(y,fs)
 >> soundsc(z,fs)
+>> d=poly([1]);
+>> zplane(d,b)
+
+>> e=poly([-0.9]);
+>> zplane(d,e)
+>> freqz(d,e)
+>> y=filter(d,e,data);
+>> z=filter(a,b,data);
+>> z=filter(d,e,data);
+>> x=filter(a,b,data);
+>> y=filter(c,b,data);
+>> soundsc(x,fs)
+>> soundsc(y,fs)
+>> soundsc(z,fs)
