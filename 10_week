@@ -44,3 +44,9 @@ ans =
 >> freqz(a, b);
 >> y=filter(a,b,data);
 >> soundsc(y,fs)
+
+>> a=[0.06896]
+>> b=[1 -1.3435 0.9025]
+>> 
+>> zplane(a,b)
+>> freqz(a, b);
