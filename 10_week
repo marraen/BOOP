@@ -1,0 +1,24 @@
+>> poly([0])
+
+ans =
+
+     1     0
+
+>> a=poly([0]);
+>> b=poly([0.9]);
+>> zplane(a,b)
+>> freqz(a,b)
+>> uiopen('d:\temp\zv_cz.wav',1)
+>> y=filter(a,b,data);
+>> soundsc(data,fs)
+>> soundsc(y,fs)
+>> freqz(a,b)
+>> b=poly([-1]);
+>> b=poly([0.9]);
+>> c=poly([-1]);
+>> zplane(c,b)
+>> freqz(c,b)
+>> 
+>> z=filter(c,b,data);
+>> soundsc(y,fs)
+>> soundsc(z,fs)
