@@ -36,3 +36,11 @@ ans =
 >> soundsc(x,fs)
 >> soundsc(y,fs)
 >> soundsc(z,fs)
+
+
+>> a=poly([1 1]);
+>> b=poly([0.2346*exp(j*1/4*pi) 0.2346*exp(-j*1/4*pi)]);
+>> zplane(a,b);
+>> freqz(a, b);
+>> y=filter(a,b,data);
+>> soundsc(y,fs)
