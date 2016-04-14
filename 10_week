@@ -50,3 +50,11 @@ ans =
 >> 
 >> zplane(a,b)
 >> freqz(a, b);
+
+>> a=[1 0 0 0 0 0 0 0 -1];
+>> b=[1 0 0 0 0 0 0 0 0];
+>> zplane(a,b)
+>> freqz(a, b);
+>> y=filter(a,b,data);
+>> soundsc(y,fs)
+>> soundsc(data,fs)
