@@ -58,3 +58,9 @@ ans =
 >> y=filter(a,b,data);
 >> soundsc(y,fs)
 >> soundsc(data,fs)
+>> b=poly([0 0 0 0 0 1 exp(j*3/8*2*pi) exp(j*5/8*2*pi)]);
+>> yy=filter(a,b,data);
+>> soundsc(yy,fs); %nejede
+>> freqz(a,b)
+>> b=poly([0 0 0 0 exp(j*1/8*2*pi) exp(j*3/8*2*pi) exp(j*5/8*2*pi) exp(j*7/8*2*pi)]);
+>> freqz(a,b)
