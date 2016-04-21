@@ -68,6 +68,7 @@
 >> y1=filter(a1,b1,data);
 >> soundsc(y1,fs)
 >> soundsc(data,fs)
+%% udelame jeste filtraci horni propusti a pak vzsledek DP secteme s vzsledkem HP a neco nam vzleze...
 >> F2=[0,0.02,0.05,0.3,0.5,1];
 >> A2=[0,0,1,1,1,1];
 >> [a2,b2]=fir2(100, F2, A2, kaiser(101));
@@ -85,3 +86,15 @@
 >> Y3=fft(y3);
 >> Mody3=2/N*abs(Y3);
 >> stem(f(1:25000),Mody3(1:25000),'.')
+
+%% pasmova zadrz by baca pomoci fir2
+>> F4=[0,0.008,0.01,0.1,0.5,1];
+>> A4=[1,1,0,1,1,1,];
+>> [a4,b4]=fir2(100,F4,A4,kaiser(101));
+>> freqz(a4,b4);
+>> 
+>> y4=filter(a4,b4,data);
+>> soundsc(y4,fs);
+>> soundsc(data,fs);
+>> soundsc(y4,fs);
+>> freqz(a4,b4);
