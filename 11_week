@@ -60,3 +60,28 @@
 >> X=fft(data);
 >> Modx=2/N*abs(X);
 >> stem(f(1:5000),Modx(1:5000),'.');
+%% rozsah 0-pi, Fvz = 100kHz -> fmez = 0.008pi
+>> F1=[0,0.008,0.01,0.1,0.5,1];
+>> A1=[1,1,0,0,0,0];
+>> [a1,b1]=fir2(100,F1,A1,kaiser(101));
+>> freqz(a1,b1);
+>> y1=filter(a1,b1,data);
+>> soundsc(y1,fs)
+>> soundsc(data,fs)
+>> F2=[0,0.02,0.05,0.3,0.5,1];
+>> A2=[0,0,1,1,1,1];
+>> [a2,b2]=fir2(100, F2, A2, kaiser(101));
+>> y2=filter(a2,b2,data);
+>> Y2=fft(y2);
+>> Mody2=2/N*abs(Y2);
+>> stem(f(1:25000),Mody2(1:25000),'.')
+>> soundsc(y2,fs)
+>> y3=y1+y2;
+>> soundsc(y3,fs);
+>> soundsc(data,fs);
+>> soundsc(y1,fs);
+>> soundsc(y2,fs);
+>> soundsc(y3,fs);
+>> Y3=fft(y3);
+>> Mody3=2/N*abs(Y3);
+>> stem(f(1:25000),Mody3(1:25000),'.')
