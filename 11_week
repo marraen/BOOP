@@ -1,0 +1,19 @@
+>> a=poly([1/0.5]);
+>> b=poly([0.5]);
+>> zplane(a,b);
+>> freqz(a,b);
+
+
+%% overeni zda je H=(0.6+z^-1)/(1+0.6*z^-1) fazovaci clanek
+
+>> b=poly([0.6]);
+>> a=poly([1/0.6]);
+>> zplane(a,b);
+>> freqz(a,b);
+
+%% nebo by Misurec
+
+>> cit=[0.6 1];
+>> jm=[1 0.6];
+>> zplane(cit,jm)
+>> freqz(cit,jm)
