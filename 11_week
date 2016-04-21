@@ -17,3 +17,11 @@
 >> jm=[1 0.6];
 >> zplane(cit,jm)
 >> freqz(cit,jm)
+
+
+>> r=0.9;
+>> w=pi/4;
+>> cit=[r^2 -2*r*cos(w) 1];
+>> jm=[1 -2*r*cos(w) r^2];
+>> zplane(cit,jm)
+>> freqz(cit,jm)
